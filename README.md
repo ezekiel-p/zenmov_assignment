@@ -2,26 +2,25 @@
 
 A new Flutter project for Zenmov Inc.
 
-## Getting Started
+## Installing Flutter
 
-This project is a starting point for a Flutter application.
+First, follow the process on installing the Flutter CLI depending on what operating system you are using the [official documentation from Flutter](https://flutter.dev/docs/get-started/install)
 
-A few resources to get you started if this is your first Flutter project:
+## Flutter Version
+I used the Flutter version 2.10.5 because this is the best fit in the packages that I used in order to build this application. Same goes with the Dart version 2.16.2. I know it's far from the latest version but there's no conflict or problem along all the packages and this is the one that I'm currently comfortable with without any hesitation.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Running the App
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Download or clone the repository on your machine. After that navigate to your downloaded or cloned repo via terminal. Once there enter this command: *flutter run*
 
 ## Package Used
 
-Here's a list of packages that were used to build this application
+Here's some of the list of packages that were used to build this application
 
-- [Freezed: is used to create the model. It's code generator for data-classes/unions/pattern-matching/cloning. > build_runner:- The build_runner package provides a concrete way of generating files using Dart code, outside of tools like the pub.](https://pub.dev/packages/freezed)
-- [Chopper: is an http client generator for Dart and Flutter using source_gen.](https://pub.dev/packages/chopper)
-- [Bloc: is used to manage the state. The flutter state management feature allows handling all possible states of the application easily.](https://pub.dev/packages/flutter_bloc)
+- [Freezed:] is used to create the model. It's code generator for data-classes/unions/pattern-matching/cloning. > build_runner:- The build_runner package provides a concrete way of generating files using Dart code, outside of tools like the pub.(https://pub.dev/packages/freezed)
+- [Chopper:] is an http client generator for Dart and Flutter using source_gen.(https://pub.dev/packages/chopper)
+- [Bloc:] is used to manage the state. The flutter state management feature allows handling all possible states of the application easily.(https://pub.dev/packages/flutter_bloc)
+- [Sizer:] is used for app display responsiveness. It helps to automatically adjust the UI for different screen sizes. (https://pub.dev/packages/sizer)
 
 Key Points:
 

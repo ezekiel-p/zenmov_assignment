@@ -7,9 +7,14 @@ part 'git_object.g.dart';
 class GitObject with _$GitObject {
   const factory GitObject({
     int? id,
+    String? name,
+    @JsonKey(name: 'full_name') String? fullName,
     Owner? owner,
-    String? description,
+    String? language,
     @JsonKey(name: 'stargazers_count') int? starGazersCount,
+    @JsonKey(name: 'forks_count') int? forksCount,
+    int? watchers,
+    @JsonKey(name: 'open_issues_count') int? openIssuesCount,
   }) = _GitObject;
 
   factory GitObject.fromJson(Map<String, dynamic> json) =>
@@ -19,8 +24,9 @@ class GitObject with _$GitObject {
 @freezed
 class Owner with _$Owner {
   const factory Owner({
-    int? id,
     String? login,
+    int? id,
+    @JsonKey(name: 'avatar_url') String? avatarURL,
     String? url,
     String? type,
   }) = _Owner;
