@@ -106,11 +106,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 10.sp,
                     ),
                 itemCount: gitState.repositories!.length,
-                itemBuilder: ((context, index) {
+                itemBuilder: (context, index) {
                   return ItemRepository(
                     model: gitState.repositories![index],
                   );
-                })),
+                }),
           );
   }
 }

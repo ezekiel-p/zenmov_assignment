@@ -39,7 +39,7 @@ class ItemRepository extends StatelessWidget {
           ),
           Expanded(
             child: Text(
-              "Repository Name: " + repositoryName,
+              "Repository Name: $repositoryName",
               style: Theme.of(context)
                   .textTheme
                   .headline6!

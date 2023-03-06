@@ -25,7 +25,7 @@ class ItemShimmer extends StatelessWidget {
     );
   }
 
-  _buildShimmer(BuildContext context) {
+  Widget _buildShimmer(BuildContext context) {
     return Row(
       children: [
         Padding(
