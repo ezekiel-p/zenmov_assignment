@@ -1,3 +1,7 @@
+/*
+ * Add additional status here to be use in your Bloc Provider
+ */
+
 abstract class FormSubmissionStatus {
   const FormSubmissionStatus();
 }

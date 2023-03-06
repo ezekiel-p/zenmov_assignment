@@ -23,14 +23,24 @@ class _$GitObjectTearOff {
 
   _GitObject call(
       {int? id,
+      String? name,
+      @JsonKey(name: 'full_name') String? fullName,
       Owner? owner,
-      String? description,
-      @JsonKey(name: 'stargazers_count') int? starGazersCount}) {
+      String? language,
+      @JsonKey(name: 'stargazers_count') int? starGazersCount,
+      @JsonKey(name: 'forks_count') int? forksCount,
+      int? watchers,
+      @JsonKey(name: 'open_issues_count') int? openIssuesCount}) {
     return _GitObject(
       id: id,
+      name: name,
+      fullName: fullName,
       owner: owner,
-      description: description,
+      language: language,
       starGazersCount: starGazersCount,
+      forksCount: forksCount,
+      watchers: watchers,
+      openIssuesCount: openIssuesCount,
     );
   }
 
@@ -45,10 +55,18 @@ const $GitObject = _$GitObjectTearOff();
 /// @nodoc
 mixin _$GitObject {
   int? get id => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'full_name')
+  String? get fullName => throw _privateConstructorUsedError;
   Owner? get owner => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: 'stargazers_count')
   int? get starGazersCount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'forks_count')
+  int? get forksCount => throw _privateConstructorUsedError;
+  int? get watchers => throw _privateConstructorUsedError;
+  @JsonKey(name: 'open_issues_count')
+  int? get openIssuesCount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -62,9 +80,14 @@ abstract class $GitObjectCopyWith<$Res> {
       _$GitObjectCopyWithImpl<$Res>;
   $Res call(
       {int? id,
+      String? name,
+      @JsonKey(name: 'full_name') String? fullName,
       Owner? owner,
-      String? description,
-      @JsonKey(name: 'stargazers_count') int? starGazersCount});
+      String? language,
+      @JsonKey(name: 'stargazers_count') int? starGazersCount,
+      @JsonKey(name: 'forks_count') int? forksCount,
+      int? watchers,
+      @JsonKey(name: 'open_issues_count') int? openIssuesCount});
 
   $OwnerCopyWith<$Res>? get owner;
 }
@@ -80,26 +103,51 @@ class _$GitObjectCopyWithImpl<$Res> implements $GitObjectCopyWith<$Res> {
   @override
   $Res call({
     Object? id = freezed,
+    Object? name = freezed,
+    Object? fullName = freezed,
     Object? owner = freezed,
-    Object? description = freezed,
+    Object? language = freezed,
     Object? starGazersCount = freezed,
+    Object? forksCount = freezed,
+    Object? watchers = freezed,
+    Object? openIssuesCount = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fullName: fullName == freezed
+          ? _value.fullName
+          : fullName // ignore: cast_nullable_to_non_nullable
+              as String?,
       owner: owner == freezed
           ? _value.owner
           : owner // ignore: cast_nullable_to_non_nullable
               as Owner?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
               as String?,
       starGazersCount: starGazersCount == freezed
           ? _value.starGazersCount
           : starGazersCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      forksCount: forksCount == freezed
+          ? _value.forksCount
+          : forksCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      watchers: watchers == freezed
+          ? _value.watchers
+          : watchers // ignore: cast_nullable_to_non_nullable
+              as int?,
+      openIssuesCount: openIssuesCount == freezed
+          ? _value.openIssuesCount
+          : openIssuesCount // ignore: cast_nullable_to_non_nullable
               as int?,
     ));
   }
@@ -124,9 +172,14 @@ abstract class _$GitObjectCopyWith<$Res> implements $GitObjectCopyWith<$Res> {
   @override
   $Res call(
       {int? id,
+      String? name,
+      @JsonKey(name: 'full_name') String? fullName,
       Owner? owner,
-      String? description,
-      @JsonKey(name: 'stargazers_count') int? starGazersCount});
+      String? language,
+      @JsonKey(name: 'stargazers_count') int? starGazersCount,
+      @JsonKey(name: 'forks_count') int? forksCount,
+      int? watchers,
+      @JsonKey(name: 'open_issues_count') int? openIssuesCount});
 
   @override
   $OwnerCopyWith<$Res>? get owner;
@@ -144,26 +197,51 @@ class __$GitObjectCopyWithImpl<$Res> extends _$GitObjectCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? name = freezed,
+    Object? fullName = freezed,
     Object? owner = freezed,
-    Object? description = freezed,
+    Object? language = freezed,
     Object? starGazersCount = freezed,
+    Object? forksCount = freezed,
+    Object? watchers = freezed,
+    Object? openIssuesCount = freezed,
   }) {
     return _then(_GitObject(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fullName: fullName == freezed
+          ? _value.fullName
+          : fullName // ignore: cast_nullable_to_non_nullable
+              as String?,
       owner: owner == freezed
           ? _value.owner
           : owner // ignore: cast_nullable_to_non_nullable
               as Owner?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
               as String?,
       starGazersCount: starGazersCount == freezed
           ? _value.starGazersCount
           : starGazersCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      forksCount: forksCount == freezed
+          ? _value.forksCount
+          : forksCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      watchers: watchers == freezed
+          ? _value.watchers
+          : watchers // ignore: cast_nullable_to_non_nullable
+              as int?,
+      openIssuesCount: openIssuesCount == freezed
+          ? _value.openIssuesCount
+          : openIssuesCount // ignore: cast_nullable_to_non_nullable
               as int?,
     ));
   }
@@ -174,9 +252,14 @@ class __$GitObjectCopyWithImpl<$Res> extends _$GitObjectCopyWithImpl<$Res>
 class _$_GitObject implements _GitObject {
   const _$_GitObject(
       {this.id,
+      this.name,
+      @JsonKey(name: 'full_name') this.fullName,
       this.owner,
-      this.description,
-      @JsonKey(name: 'stargazers_count') this.starGazersCount});
+      this.language,
+      @JsonKey(name: 'stargazers_count') this.starGazersCount,
+      @JsonKey(name: 'forks_count') this.forksCount,
+      this.watchers,
+      @JsonKey(name: 'open_issues_count') this.openIssuesCount});
 
   factory _$_GitObject.fromJson(Map<String, dynamic> json) =>
       _$$_GitObjectFromJson(json);
@@ -184,16 +267,29 @@ class _$_GitObject implements _GitObject {
   @override
   final int? id;
   @override
+  final String? name;
+  @override
+  @JsonKey(name: 'full_name')
+  final String? fullName;
+  @override
   final Owner? owner;
   @override
-  final String? description;
+  final String? language;
   @override
   @JsonKey(name: 'stargazers_count')
   final int? starGazersCount;
+  @override
+  @JsonKey(name: 'forks_count')
+  final int? forksCount;
+  @override
+  final int? watchers;
+  @override
+  @JsonKey(name: 'open_issues_count')
+  final int? openIssuesCount;
 
   @override
   String toString() {
-    return 'GitObject(id: $id, owner: $owner, description: $description, starGazersCount: $starGazersCount)';
+    return 'GitObject(id: $id, name: $name, fullName: $fullName, owner: $owner, language: $language, starGazersCount: $starGazersCount, forksCount: $forksCount, watchers: $watchers, openIssuesCount: $openIssuesCount)';
   }
 
   @override
@@ -202,23 +298,42 @@ class _$_GitObject implements _GitObject {
         (other is _GitObject &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.fullName, fullName) ||
+                const DeepCollectionEquality()
+                    .equals(other.fullName, fullName)) &&
             (identical(other.owner, owner) ||
                 const DeepCollectionEquality().equals(other.owner, owner)) &&
-            (identical(other.description, description) ||
+            (identical(other.language, language) ||
                 const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
+                    .equals(other.language, language)) &&
             (identical(other.starGazersCount, starGazersCount) ||
                 const DeepCollectionEquality()
-                    .equals(other.starGazersCount, starGazersCount)));
+                    .equals(other.starGazersCount, starGazersCount)) &&
+            (identical(other.forksCount, forksCount) ||
+                const DeepCollectionEquality()
+                    .equals(other.forksCount, forksCount)) &&
+            (identical(other.watchers, watchers) ||
+                const DeepCollectionEquality()
+                    .equals(other.watchers, watchers)) &&
+            (identical(other.openIssuesCount, openIssuesCount) ||
+                const DeepCollectionEquality()
+                    .equals(other.openIssuesCount, openIssuesCount)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(fullName) ^
       const DeepCollectionEquality().hash(owner) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(starGazersCount);
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(starGazersCount) ^
+      const DeepCollectionEquality().hash(forksCount) ^
+      const DeepCollectionEquality().hash(watchers) ^
+      const DeepCollectionEquality().hash(openIssuesCount);
 
   @JsonKey(ignore: true)
   @override
@@ -234,9 +349,14 @@ class _$_GitObject implements _GitObject {
 abstract class _GitObject implements GitObject {
   const factory _GitObject(
       {int? id,
+      String? name,
+      @JsonKey(name: 'full_name') String? fullName,
       Owner? owner,
-      String? description,
-      @JsonKey(name: 'stargazers_count') int? starGazersCount}) = _$_GitObject;
+      String? language,
+      @JsonKey(name: 'stargazers_count') int? starGazersCount,
+      @JsonKey(name: 'forks_count') int? forksCount,
+      int? watchers,
+      @JsonKey(name: 'open_issues_count') int? openIssuesCount}) = _$_GitObject;
 
   factory _GitObject.fromJson(Map<String, dynamic> json) =
       _$_GitObject.fromJson;
@@ -244,12 +364,25 @@ abstract class _GitObject implements GitObject {
   @override
   int? get id => throw _privateConstructorUsedError;
   @override
+  String? get name => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'full_name')
+  String? get fullName => throw _privateConstructorUsedError;
+  @override
   Owner? get owner => throw _privateConstructorUsedError;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'stargazers_count')
   int? get starGazersCount => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'forks_count')
+  int? get forksCount => throw _privateConstructorUsedError;
+  @override
+  int? get watchers => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'open_issues_count')
+  int? get openIssuesCount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GitObjectCopyWith<_GitObject> get copyWith =>
@@ -264,10 +397,16 @@ Owner _$OwnerFromJson(Map<String, dynamic> json) {
 class _$OwnerTearOff {
   const _$OwnerTearOff();
 
-  _Owner call({int? id, String? login, String? url, String? type}) {
+  _Owner call(
+      {String? login,
+      int? id,
+      @JsonKey(name: 'avatar_url') String? avatarURL,
+      String? url,
+      String? type}) {
     return _Owner(
-      id: id,
       login: login,
+      id: id,
+      avatarURL: avatarURL,
       url: url,
       type: type,
     );
@@ -283,8 +422,10 @@ const $Owner = _$OwnerTearOff();
 
 /// @nodoc
 mixin _$Owner {
-  int? get id => throw _privateConstructorUsedError;
   String? get login => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'avatar_url')
+  String? get avatarURL => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
 
@@ -297,7 +438,12 @@ mixin _$Owner {
 abstract class $OwnerCopyWith<$Res> {
   factory $OwnerCopyWith(Owner value, $Res Function(Owner) then) =
       _$OwnerCopyWithImpl<$Res>;
-  $Res call({int? id, String? login, String? url, String? type});
+  $Res call(
+      {String? login,
+      int? id,
+      @JsonKey(name: 'avatar_url') String? avatarURL,
+      String? url,
+      String? type});
 }
 
 /// @nodoc
@@ -310,19 +456,24 @@ class _$OwnerCopyWithImpl<$Res> implements $OwnerCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? id = freezed,
     Object? login = freezed,
+    Object? id = freezed,
+    Object? avatarURL = freezed,
     Object? url = freezed,
     Object? type = freezed,
   }) {
     return _then(_value.copyWith(
+      login: login == freezed
+          ? _value.login
+          : login // ignore: cast_nullable_to_non_nullable
+              as String?,
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      login: login == freezed
-          ? _value.login
-          : login // ignore: cast_nullable_to_non_nullable
+      avatarURL: avatarURL == freezed
+          ? _value.avatarURL
+          : avatarURL // ignore: cast_nullable_to_non_nullable
               as String?,
       url: url == freezed
           ? _value.url
@@ -341,7 +492,12 @@ abstract class _$OwnerCopyWith<$Res> implements $OwnerCopyWith<$Res> {
   factory _$OwnerCopyWith(_Owner value, $Res Function(_Owner) then) =
       __$OwnerCopyWithImpl<$Res>;
   @override
-  $Res call({int? id, String? login, String? url, String? type});
+  $Res call(
+      {String? login,
+      int? id,
+      @JsonKey(name: 'avatar_url') String? avatarURL,
+      String? url,
+      String? type});
 }
 
 /// @nodoc
@@ -355,19 +511,24 @@ class __$OwnerCopyWithImpl<$Res> extends _$OwnerCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
     Object? login = freezed,
+    Object? id = freezed,
+    Object? avatarURL = freezed,
     Object? url = freezed,
     Object? type = freezed,
   }) {
     return _then(_Owner(
+      login: login == freezed
+          ? _value.login
+          : login // ignore: cast_nullable_to_non_nullable
+              as String?,
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      login: login == freezed
-          ? _value.login
-          : login // ignore: cast_nullable_to_non_nullable
+      avatarURL: avatarURL == freezed
+          ? _value.avatarURL
+          : avatarURL // ignore: cast_nullable_to_non_nullable
               as String?,
       url: url == freezed
           ? _value.url
@@ -384,15 +545,23 @@ class __$OwnerCopyWithImpl<$Res> extends _$OwnerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Owner implements _Owner {
-  const _$_Owner({this.id, this.login, this.url, this.type});
+  const _$_Owner(
+      {this.login,
+      this.id,
+      @JsonKey(name: 'avatar_url') this.avatarURL,
+      this.url,
+      this.type});
 
   factory _$_Owner.fromJson(Map<String, dynamic> json) =>
       _$$_OwnerFromJson(json);
 
   @override
+  final String? login;
+  @override
   final int? id;
   @override
-  final String? login;
+  @JsonKey(name: 'avatar_url')
+  final String? avatarURL;
   @override
   final String? url;
   @override
@@ -400,17 +569,20 @@ class _$_Owner implements _Owner {
 
   @override
   String toString() {
-    return 'Owner(id: $id, login: $login, url: $url, type: $type)';
+    return 'Owner(login: $login, id: $id, avatarURL: $avatarURL, url: $url, type: $type)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Owner &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.login, login) ||
                 const DeepCollectionEquality().equals(other.login, login)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.avatarURL, avatarURL) ||
+                const DeepCollectionEquality()
+                    .equals(other.avatarURL, avatarURL)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.type, type) ||
@@ -420,8 +592,9 @@ class _$_Owner implements _Owner {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(login) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(avatarURL) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(type);
 
@@ -437,15 +610,22 @@ class _$_Owner implements _Owner {
 }
 
 abstract class _Owner implements Owner {
-  const factory _Owner({int? id, String? login, String? url, String? type}) =
-      _$_Owner;
+  const factory _Owner(
+      {String? login,
+      int? id,
+      @JsonKey(name: 'avatar_url') String? avatarURL,
+      String? url,
+      String? type}) = _$_Owner;
 
   factory _Owner.fromJson(Map<String, dynamic> json) = _$_Owner.fromJson;
 
   @override
+  String? get login => throw _privateConstructorUsedError;
+  @override
   int? get id => throw _privateConstructorUsedError;
   @override
-  String? get login => throw _privateConstructorUsedError;
+  @JsonKey(name: 'avatar_url')
+  String? get avatarURL => throw _privateConstructorUsedError;
   @override
   String? get url => throw _privateConstructorUsedError;
   @override
